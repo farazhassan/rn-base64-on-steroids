@@ -1,0 +1,28 @@
+{
+  "name": "rn-base64-on-steroids",
+  "version": "1.0.0",
+  "description": "## Getting started",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "base64",
+    "android",
+    "native"
+  ],
+  "author": "Faraz Hassan",
+  "license": "ISC",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farazhassan/rn-base64-on-steroids.git"
+  },
+  "bugs": {
+    "url": "https://github.com/farazhassan/rn-base64-on-steroids/issues"
+  },
+  "homepage": "https://github.com/farazhassan/rn-base64-on-steroids#readme"
+}
