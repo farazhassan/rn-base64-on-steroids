@@ -29,7 +29,8 @@ public class RNBase64OnSteroidsModule extends ReactContextBaseJavaModule {
     byte[] byteData;
     try {
       byteData = data.getBytes("UTF-8");
-      promise.resolve(Base64.encodeToString(byteData, Base64.DEFAULT));
+      // Use NO_WRAP to avoid inserting line breaks in the encoded output
+      promise.resolve(Base64.encodeToString(byteData, Base64.NO_WRAP));
     } catch (UnsupportedEncodingException exception) {
       exception.printStackTrace();
       promise.reject(exception);
@@ -38,7 +39,8 @@ public class RNBase64OnSteroidsModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void decode(String data, Promise promise) {
-    byte[] byteData = Base64.decode(data, Base64.DEFAULT);
+    // Use NO_WRAP for consistency with encoding
+    byte[] byteData = Base64.decode(data, Base64.NO_WRAP);
     try {
       promise.resolve(new String(byteData, "UTF-8"));
     } catch (UnsupportedEncodingException exception) {
